@@ -1,4 +1,4 @@
-local versionx = "VERSI 1 IQNAZ KECE"
+local versionx = "1.6.7"
 
 ---// Loading Section \\---
 task.wait(2)
@@ -144,7 +144,6 @@ function sex()
     getgenv().difficulty = data.difficulty
     getgenv().world = data.world
     getgenv().level = data.level
-    getgenv().raid = data.raid
     --getgenv().door = data.door
 
     getgenv().SpawnUnitPos = data.xspawnUnitPos
@@ -182,7 +181,6 @@ function sex()
             difficulty = getgenv().difficulty,
             world = getgenv().world,
             level = getgenv().level,
-            raid = getgenv().raid,
             --door = getgenv().door,
 
             xspawnUnitPos = getgenv().SpawnUnitPos,
@@ -203,9 +201,9 @@ function sex()
     local exec = tostring(identifyexecutor())
 
     local DiscordLib = loadstring(game:HttpGet "https://raw.githubusercontent.com/Forever4D/Lib/main/DiscordLib2.lua")()
-    local win = DiscordLib:Window("[🥷UPD] Anime Adventures "..versionx.." - "..exec)
+    local win = DiscordLib:Window("[👊UPD 10] Anime Adventures "..versionx.." - "..exec)
        
-    if exec == "Synapse X" or exec == "ScriptWare" or exec == "Trigon" or exec == "Furk" then
+    if exec == "Synapse X" or exec == "ScriptWare" or exec == "Trigon" then
         print("Good boi")
     else
         local gettrigonserver = win:Server("Get Trigon Evo!", "http://www.roblox.com/asset/?id=7628278821")
@@ -232,8 +230,6 @@ function sex()
         local devilcity = autofrmserver:Channel("👿 Devil City")
         local autofarmtab = autofrmserver:Channel("🤖 Auto Farm")
         local autoclngtab = autofrmserver:Channel("🎯 Auto Challenge")
-        local autoraidtab = autofrmserver:Channel("🎮 Auto Raid")
-
     
 
 --------------------------------------------------
@@ -520,65 +516,6 @@ function sex()
             
         end)
 --#endregion
-
---- Select Raid Tab---
---#region Select raid tab
-getgenv().levels = {"nill"}
-
-getgenv().diff = slectraid:Dropdown(getgenv().difficulty, function(diff)
-    getgenv().difficulty = diff
-    updatejson()
-end)
-
-local worlddrop = slectraid:Dropdown("Select World", {"Hidden Sand Village", "Shiganshinu District", "Infinity Train", "West City", "Storm Hideout"}, getgenv().world, function(world)
-    getgenv().raid = raid
-    updatejson()
-    if world == "West City" then
-        getgenv().leveldrop:Clear()
-        table.clear(levels)
-        getgenv().levels = {"namek_raid",}
-        for i, v in ipairs(levels) do
-            getgenv().leveldrop:Add(v)
-        end
-    elseif world == "Shiganshinu District" then
-        getgenv().leveldrop:Clear()
-        table.clear(levels)
-        getgenv().levels = {"aot_raid",}
-        for i, v in ipairs(levels) do
-            getgenv().leveldrop:Add(v)
-        end
-    elseif world == "Infinity Train" then
-        getgenv().leveldrop:Clear()
-        table.clear(levels)
-        getgenv().levels = {"demonslayer_raid",}
-        for i, v in ipairs(levels) do
-            getgenv().leveldrop:Add(v)
-        end
-    elseif world == "Hidden Sand Village" then
-        getgenv().leveldrop:Clear()
-        table.clear(levels)
-        getgenv().levels = {"naruto_raid",}
-        for i, v in ipairs(levels) do
-            getgenv().leveldrop:Add(v)
-        end
-    elseif world == "Storm Hideout" then
-        getgenv().leveldrop:Clear()
-        table.clear(levels)
-        getgenv().levels = {"stormhideout_level_1","stormhideout_level_2","stormhideout_level_3","stormhideout_level_4",}
-        for i, v in ipairs(levels) do
-            getgenv().leveldrop:Add(v)
-        end
-    end
-end)
-
-
-    getgenv().leveldrop = slectraid:Dropdown("Select Level", getgenv().levels, getgenv().level, function(level)
-    getgenv().level = level
-    updatejson()
-    
-end)
---#endregion
-
 
 
 
