@@ -19,7 +19,7 @@ local RunService = game:GetService("RunService")
 local mouse = game.Players.LocalPlayer:GetMouse()
 local UserInputService = game:GetService("UserInputService")
 
-getgenv().savefilename = "Anime-Adventures_UPD"..game.Players.LocalPlayer.Name..".json"
+getgenv().savefilename = "Anime-Adventures_"..game.Players.LocalPlayer.Name..".json"
 getgenv().door = "_lobbytemplategreen1"
 
 --#region Webhook Sender
@@ -203,7 +203,7 @@ function sex()
     local DiscordLib = loadstring(game:HttpGet "https://raw.githubusercontent.com/Forever4D/Lib/main/DiscordLib2.lua")()
     local win = DiscordLib:Window("[👊UPD 10] Anime Adventures "..versionx.." - "..exec)
        
-    if exec == "Synapse X" or exec == "ScriptWare" or exec == "Trigon" then
+    if exec == "Synapse X" or exec == "ScriptWare" or exec == "Trigon" or exec == "Furk" then
         print("Good boi")
     else
         local gettrigonserver = win:Server("Get Trigon Evo!", "http://www.roblox.com/asset/?id=7628278821")
