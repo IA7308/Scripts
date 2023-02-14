@@ -1,4 +1,4 @@
-local versionx = "1.6.10"
+local versionx = "1.7.0"
 
 ---// Loading Section \\---
 task.wait(2)
@@ -19,7 +19,7 @@ local RunService = game:GetService("RunService")
 local mouse = game.Players.LocalPlayer:GetMouse()
 local UserInputService = game:GetService("UserInputService")
 
-getgenv().savefilename = "Anime-Adventures_"..game.Players.LocalPlayer.Name..".json"
+getgenv().savefilename = "Anime-Adventures_UPD_"..game.Players.LocalPlayer.Name..".json"
 getgenv().door = "_lobbytemplategreen1"
 
 --#region Webhook Sender
@@ -201,7 +201,7 @@ function sex()
     local exec = tostring(identifyexecutor())
 
     local DiscordLib = loadstring(game:HttpGet "https://raw.githubusercontent.com/Forever4D/Lib/main/DiscordLib2.lua")()
-    local win = DiscordLib:Window("[👊UPD 10] Anime Adventures "..versionx.." - "..exec)
+    local win = DiscordLib:Window("[🥷UPD] Anime Adventures "..versionx.." - "..exec)
        
     if exec == "Synapse X" or exec == "ScriptWare" or exec == "Trigon" or exec == "Furk" then
         print("Good boi")
