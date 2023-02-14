@@ -1,4 +1,4 @@
-local versionx = "1.6.7"
+local versionx = "VERSI 1 IQNAZ KECE"
 
 ---// Loading Section \\---
 task.wait(2)
@@ -19,7 +19,7 @@ local RunService = game:GetService("RunService")
 local mouse = game.Players.LocalPlayer:GetMouse()
 local UserInputService = game:GetService("UserInputService")
 
-getgenv().savefilename = "Anime-Adventures_UPD_"..game.Players.LocalPlayer.Name..".json"
+getgenv().savefilename = "Anime-Adventures_UPD11_"..game.Players.LocalPlayer.Name..".json"
 getgenv().door = "_lobbytemplategreen1"
 
 --#region Webhook Sender
@@ -144,6 +144,7 @@ function sex()
     getgenv().difficulty = data.difficulty
     getgenv().world = data.world
     getgenv().level = data.level
+    getgenv().raid = data.raid
     --getgenv().door = data.door
 
     getgenv().SpawnUnitPos = data.xspawnUnitPos
@@ -204,7 +205,7 @@ function sex()
     local DiscordLib = loadstring(game:HttpGet "https://raw.githubusercontent.com/Forever4D/Lib/main/DiscordLib2.lua")()
     local win = DiscordLib:Window("[🥷UPD] Anime Adventures "..versionx.." - "..exec)
        
-    if exec == "Synapse X" or exec == "ScriptWare" or exec == "Trigon" or exec == "Furk Ultra" then
+    if exec == "Synapse X" or exec == "ScriptWare" or exec == "Trigon" or exec == "Furk" then
         print("Good boi")
     else
         local gettrigonserver = win:Server("Get Trigon Evo!", "http://www.roblox.com/asset/?id=7628278821")
