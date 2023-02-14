@@ -19,7 +19,7 @@ local RunService = game:GetService("RunService")
 local mouse = game.Players.LocalPlayer:GetMouse()
 local UserInputService = game:GetService("UserInputService")
 
-getgenv().savefilename = "Anime-Adventures_UPD11_"..game.Players.LocalPlayer.Name..".json"
+getgenv().savefilename = "Anime-Adventures_UPD"..game.Players.LocalPlayer.Name..".json"
 getgenv().door = "_lobbytemplategreen1"
 
 --#region Webhook Sender
